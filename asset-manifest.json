@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/financial-management/static/css/main.b9d55855.chunk.css",
+    "main.js": "/financial-management/static/js/main.514ec7de.chunk.js",
+    "main.js.map": "/financial-management/static/js/main.514ec7de.chunk.js.map",
+    "runtime-main.js": "/financial-management/static/js/runtime-main.29e350d8.js",
+    "runtime-main.js.map": "/financial-management/static/js/runtime-main.29e350d8.js.map",
+    "static/js/2.0590add6.chunk.js": "/financial-management/static/js/2.0590add6.chunk.js",
+    "static/js/2.0590add6.chunk.js.map": "/financial-management/static/js/2.0590add6.chunk.js.map",
+    "index.html": "/financial-management/index.html",
+    "precache-manifest.05b51007a2c968889e287294b23a8c6c.js": "/financial-management/precache-manifest.05b51007a2c968889e287294b23a8c6c.js",
+    "service-worker.js": "/financial-management/service-worker.js",
+    "static/css/main.b9d55855.chunk.css.map": "/financial-management/static/css/main.b9d55855.chunk.css.map",
+    "static/js/2.0590add6.chunk.js.LICENSE": "/financial-management/static/js/2.0590add6.chunk.js.LICENSE",
+    "static/media/App.scss": "/financial-management/static/media/icon-caret-down.2ee1553f.svg",
+    "static/media/Hero.scss": "/financial-management/static/media/shekel-banknotes.d339988a.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.29e350d8.js",
+    "static/js/2.0590add6.chunk.js",
+    "static/css/main.b9d55855.chunk.css",
+    "static/js/main.514ec7de.chunk.js"
+  ]
+}
