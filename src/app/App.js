@@ -6,8 +6,7 @@ import NetPayCalculator from '../pages/net-pay-calculators';
 
 function App() {
 	return (
-		// <Router basename="/financial-management">
-		<Router basename={process.env.PUBLIC_URL}>
+		<Router basename="/financial-management">
 			<Switch>
 				<Route path="/" exact component={Home} />
 				<Route

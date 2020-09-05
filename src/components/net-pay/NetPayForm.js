@@ -23,8 +23,6 @@ function NetPayForm(props) {
 	const handleChange = props.handleChange;
 	const invalidNum = 'Enter a valid number.';
 
-	console.log('process.env.public_url', process.env.public_url);
-
 	return (
 		<section>
 			<h2>Net pay calculator</h2>
