@@ -5,9 +5,9 @@ import Home from '../pages/home';
 import NetPayCalculator from '../pages/net-pay-calculators';
 
 function App() {
-	console.log('process.env.public_url', process.env.public_url);
 	return (
-		<Router basename="/financial-management">
+		// <Router basename="/financial-management">
+		<Router basename={process.env.PUBLIC_URL}>
 			<Switch>
 				<Route path="/" exact component={Home} />
 				<Route
