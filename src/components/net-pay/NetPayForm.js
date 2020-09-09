@@ -1,8 +1,8 @@
 import React from 'react';
 import { func, shape } from 'prop-types';
 import { netPayType } from './PropTypes';
-import Form from 'react-bootstrap/Form';
-import { Row, Col, InputGroup, FormControl, Button } from 'react-bootstrap';
+// import Form from 'react-bootstrap/Form';
+import { Form, Row, Col, InputGroup, FormControl, Button } from 'react-bootstrap';
 
 function NetPayForm(props) {
 	const {
@@ -33,6 +33,203 @@ function NetPayForm(props) {
 				onSubmit={props.handleSubmit}
 				// autocomplete="off"
 			>
+				{/*
+				//
+				//
+				//
+				//
+				*/}
+				<Form.Group as={Row}>
+					<Form.Label column xs={5} md={6}>
+						type=number pattern=0-9 step=any
+					</Form.Label>
+					<Col xs={7} md={6}>
+						<Form.Control as="input" type="number" pattern="[0-9]*" step="any"></Form.Control>
+						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
+					</Col>
+				</Form.Group>
+				<Form.Group as={Row}>
+					<Form.Label column xs={5} md={6}>
+						type=number pattern=0-9 step=0.1
+					</Form.Label>
+					<Col xs={7} md={6}>
+						<Form.Control as="input" type="number" pattern="[0-9]*" step="0.1"></Form.Control>
+						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
+					</Col>
+				</Form.Group>
+				<Form.Group as={Row}>
+					<Form.Label column xs={5} md={6}>
+						type=number pattern=none step=0.1
+					</Form.Label>
+					<Col xs={7} md={6}>
+						<Form.Control as="input" type="number" step="0.1"></Form.Control>
+						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
+					</Col>
+				</Form.Group>
+				<Form.Group as={Row}>
+					<Form.Label column xs={5} md={6}>
+						type=none pattern=none step=0.1 inputmode=numeric
+					</Form.Label>
+					<Col xs={7} md={6}>
+						<Form.Control as="input" inputmode="numeric" step="0.1"></Form.Control>
+						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
+					</Col>
+				</Form.Group>
+				<Form.Group as={Row}>
+					<Form.Label column xs={5} md={6}>
+						type=none pattern=0-9 step=0.1 inputmode=numeric
+					</Form.Label>
+					<Col xs={7} md={6}>
+						<Form.Control as="input" inputmode="numeric" pattern="[0-9]*" step="0.1"></Form.Control>
+						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
+					</Col>
+				</Form.Group>
+				<Form.Group as={Row}>
+					<Form.Label column xs={5} md={6}>
+						type=none pattern=0-9 step=none inputmode=numeric
+					</Form.Label>
+					<Col xs={7} md={6}>
+						<Form.Control as="input" inputmode="numeric" pattern="[0-9]*"></Form.Control>
+						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
+					</Col>
+				</Form.Group>
+				<Form.Group as={Row}>
+					<Form.Label column xs={5} md={6}>
+						type=number pattern=0-9 step=0.1 inputmode=numeric
+					</Form.Label>
+					<Col xs={7} md={6}>
+						<Form.Control
+							as="input"
+							type="number"
+							inputmode="numeric"
+							pattern="[0-9]*"
+							step="0.1"
+						></Form.Control>
+						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
+					</Col>
+				</Form.Group>
+				<Form.Group as={Row}>
+					<Form.Label column xs={5} md={6}>
+						type=number pattern=none step=none inputmode=numeric
+					</Form.Label>
+					<Col xs={7} md={6}>
+						<Form.Control as="input" type="number" inputmode="numeric"></Form.Control>
+						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
+					</Col>
+				</Form.Group>
+				<Form.Group as={Row}>
+					<Form.Label column xs={5} md={6}>
+						type=number pattern=none step=0.1 inputmode=numeric
+					</Form.Label>
+					<Col xs={7} md={6}>
+						<Form.Control as="input" type="number" inputmode="numeric" step="0.1"></Form.Control>
+						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
+					</Col>
+				</Form.Group>
+				<Form.Group as={Row}>
+					<Form.Label column xs={5} md={6}>
+						type=number pattern=none step=0.1 inputmode=decimal
+					</Form.Label>
+					<Col xs={7} md={6}>
+						<Form.Control as="input" type="number" inputmode="decimal" step="0.1"></Form.Control>
+						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
+					</Col>
+				</Form.Group>
+				<Form.Group as={Row}>
+					<Form.Label column xs={5} md={6}>
+						type=number pattern=none step=0.25 inputmode=decimal
+					</Form.Label>
+					<Col xs={7} md={6}>
+						<Form.Control as="input" type="number" inputmode="decimal" step="0.25"></Form.Control>
+						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
+					</Col>
+				</Form.Group>
+				<Form.Group as={Row}>
+					<Form.Label column xs={5} md={6}>
+						type=none pattern=none step=none inputmode=decimal
+					</Form.Label>
+					<Col xs={7} md={6}>
+						<Form.Control as="input" inputmode="decimal"></Form.Control>
+						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
+					</Col>
+				</Form.Group>
+				<Form.Group as={Row}>
+					<Form.Label column xs={5} md={6}>
+						type=number pattern=none step=none inputmode=decimal
+					</Form.Label>
+					<Col xs={7} md={6}>
+						<Form.Control as="input" type="number" inputmode="decimal"></Form.Control>
+						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
+					</Col>
+				</Form.Group>
+				<Form.Group as={Row}>
+					<Form.Label column xs={5} md={6}>
+						type=number pattern=0-9 step=none inputmode=decimal
+					</Form.Label>
+					<Col xs={7} md={6}>
+						<Form.Control
+							as="input"
+							type="number"
+							inputmode="decimal"
+							pattern="[0-9]*"
+						></Form.Control>
+						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
+					</Col>
+				</Form.Group>
+				<Form.Group as={Row}>
+					<Form.Label column xs={5} md={6}>
+						type=number pattern=0-9 step=.25 inputmode=decimal
+					</Form.Label>
+					<Col xs={7} md={6}>
+						<Form.Control
+							as="input"
+							type="number"
+							inputmode="decimal"
+							pattern="[0-9]*"
+							step="0.25"
+						></Form.Control>
+						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
+					</Col>
+				</Form.Group>
+				<Form.Group as={Row}>
+					<Form.Label column xs={5} md={6}>
+						type=none pattern=0-9 step=.25 inputmode=decimal
+					</Form.Label>
+					<Col xs={7} md={6}>
+						<Form.Control
+							as="input"
+							inputmode="decimal"
+							pattern="[0-9]*"
+							step="0.25"
+						></Form.Control>
+						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
+					</Col>
+				</Form.Group>
+				<Form.Group as={Row}>
+					<Form.Label column xs={5} md={6}>
+						type=none pattern=0-9 step=none inputmode=decimal
+					</Form.Label>
+					<Col xs={7} md={6}>
+						<Form.Control as="input" inputmode="decimal" pattern="[0-9]*"></Form.Control>
+						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
+					</Col>
+				</Form.Group>
+				<Form.Group as={Row}>
+					<Form.Label column xs={5} md={6}>
+						type=none pattern=none step=.25 inputmode=decimal
+					</Form.Label>
+					<Col xs={7} md={6}>
+						<Form.Control as="input" inputmode="decimal" step="0.25"></Form.Control>
+						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
+					</Col>
+				</Form.Group>
+
+				{/*
+				//
+				//
+				//
+				//
+				*/}
 				<Form.Group as={Row}>
 					<Form.Label htmlFor="taxYear" column xs={5} md={6}>
 						Tax year
