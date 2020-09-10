@@ -41,7 +41,7 @@ function NetPayForm(props) {
 				*/}
 				<Form.Group as={Row}>
 					<Form.Label column xs={5} md={6}>
-						type=number pattern=0-9 step=any
+						1
 					</Form.Label>
 					<Col xs={7} md={6}>
 						<Form.Control as="input" type="number" pattern="[0-9]*" step="any"></Form.Control>
@@ -50,7 +50,7 @@ function NetPayForm(props) {
 				</Form.Group>
 				<Form.Group as={Row}>
 					<Form.Label column xs={5} md={6}>
-						type=number pattern=0-9 step=0.1
+						2
 					</Form.Label>
 					<Col xs={7} md={6}>
 						<Form.Control as="input" type="number" pattern="[0-9]*" step="0.1"></Form.Control>
@@ -59,7 +59,7 @@ function NetPayForm(props) {
 				</Form.Group>
 				<Form.Group as={Row}>
 					<Form.Label column xs={5} md={6}>
-						type=number pattern=none step=0.1
+						3
 					</Form.Label>
 					<Col xs={7} md={6}>
 						<Form.Control as="input" type="number" step="0.1"></Form.Control>
@@ -68,7 +68,7 @@ function NetPayForm(props) {
 				</Form.Group>
 				<Form.Group as={Row}>
 					<Form.Label column xs={5} md={6}>
-						type=none pattern=none step=0.1 inputmode=numeric
+						4
 					</Form.Label>
 					<Col xs={7} md={6}>
 						<Form.Control as="input" inputmode="numeric" step="0.1"></Form.Control>
@@ -77,7 +77,7 @@ function NetPayForm(props) {
 				</Form.Group>
 				<Form.Group as={Row}>
 					<Form.Label column xs={5} md={6}>
-						type=none pattern=0-9 step=0.1 inputmode=numeric
+						5
 					</Form.Label>
 					<Col xs={7} md={6}>
 						<Form.Control as="input" inputmode="numeric" pattern="[0-9]*" step="0.1"></Form.Control>
@@ -86,7 +86,7 @@ function NetPayForm(props) {
 				</Form.Group>
 				<Form.Group as={Row}>
 					<Form.Label column xs={5} md={6}>
-						type=none pattern=0-9 step=none inputmode=numeric
+						6
 					</Form.Label>
 					<Col xs={7} md={6}>
 						<Form.Control as="input" inputmode="numeric" pattern="[0-9]*"></Form.Control>
@@ -95,7 +95,7 @@ function NetPayForm(props) {
 				</Form.Group>
 				<Form.Group as={Row}>
 					<Form.Label column xs={5} md={6}>
-						type=number pattern=0-9 step=0.1 inputmode=numeric
+						7
 					</Form.Label>
 					<Col xs={7} md={6}>
 						<Form.Control
@@ -110,7 +110,7 @@ function NetPayForm(props) {
 				</Form.Group>
 				<Form.Group as={Row}>
 					<Form.Label column xs={5} md={6}>
-						type=number pattern=none step=none inputmode=numeric
+						8
 					</Form.Label>
 					<Col xs={7} md={6}>
 						<Form.Control as="input" type="number" inputmode="numeric"></Form.Control>
@@ -119,7 +119,7 @@ function NetPayForm(props) {
 				</Form.Group>
 				<Form.Group as={Row}>
 					<Form.Label column xs={5} md={6}>
-						type=number pattern=none step=0.1 inputmode=numeric
+						9
 					</Form.Label>
 					<Col xs={7} md={6}>
 						<Form.Control as="input" type="number" inputmode="numeric" step="0.1"></Form.Control>
@@ -128,7 +128,7 @@ function NetPayForm(props) {
 				</Form.Group>
 				<Form.Group as={Row}>
 					<Form.Label column xs={5} md={6}>
-						type=number pattern=none step=0.1 inputmode=decimal
+						10
 					</Form.Label>
 					<Col xs={7} md={6}>
 						<Form.Control as="input" type="number" inputmode="decimal" step="0.1"></Form.Control>
@@ -137,7 +137,7 @@ function NetPayForm(props) {
 				</Form.Group>
 				<Form.Group as={Row}>
 					<Form.Label column xs={5} md={6}>
-						type=number pattern=none step=0.25 inputmode=decimal
+						11
 					</Form.Label>
 					<Col xs={7} md={6}>
 						<Form.Control as="input" type="number" inputmode="decimal" step="0.25"></Form.Control>
@@ -146,7 +146,7 @@ function NetPayForm(props) {
 				</Form.Group>
 				<Form.Group as={Row}>
 					<Form.Label column xs={5} md={6}>
-						type=none pattern=none step=none inputmode=decimal
+						12
 					</Form.Label>
 					<Col xs={7} md={6}>
 						<Form.Control as="input" inputmode="decimal"></Form.Control>
@@ -155,7 +155,7 @@ function NetPayForm(props) {
 				</Form.Group>
 				<Form.Group as={Row}>
 					<Form.Label column xs={5} md={6}>
-						type=number pattern=none step=none inputmode=decimal
+						13
 					</Form.Label>
 					<Col xs={7} md={6}>
 						<Form.Control as="input" type="number" inputmode="decimal"></Form.Control>
@@ -164,7 +164,7 @@ function NetPayForm(props) {
 				</Form.Group>
 				<Form.Group as={Row}>
 					<Form.Label column xs={5} md={6}>
-						type=number pattern=0-9 step=none inputmode=decimal
+						14
 					</Form.Label>
 					<Col xs={7} md={6}>
 						<Form.Control
@@ -178,7 +178,7 @@ function NetPayForm(props) {
 				</Form.Group>
 				<Form.Group as={Row}>
 					<Form.Label column xs={5} md={6}>
-						type=number pattern=0-9 step=.25 inputmode=decimal
+						15
 					</Form.Label>
 					<Col xs={7} md={6}>
 						<Form.Control
@@ -193,7 +193,7 @@ function NetPayForm(props) {
 				</Form.Group>
 				<Form.Group as={Row}>
 					<Form.Label column xs={5} md={6}>
-						type=none pattern=0-9 step=.25 inputmode=decimal
+						16
 					</Form.Label>
 					<Col xs={7} md={6}>
 						<Form.Control
@@ -207,7 +207,7 @@ function NetPayForm(props) {
 				</Form.Group>
 				<Form.Group as={Row}>
 					<Form.Label column xs={5} md={6}>
-						type=none pattern=0-9 step=none inputmode=decimal
+						17
 					</Form.Label>
 					<Col xs={7} md={6}>
 						<Form.Control as="input" inputmode="decimal" pattern="[0-9]*"></Form.Control>
@@ -216,7 +216,7 @@ function NetPayForm(props) {
 				</Form.Group>
 				<Form.Group as={Row}>
 					<Form.Label column xs={5} md={6}>
-						type=none pattern=none step=.25 inputmode=decimal
+						18
 					</Form.Label>
 					<Col xs={7} md={6}>
 						<Form.Control as="input" inputmode="decimal" step="0.25"></Form.Control>
