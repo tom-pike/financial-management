@@ -223,6 +223,38 @@ function NetPayForm(props) {
 						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
 					</Col>
 				</Form.Group>
+				<Form.Group as={Row}>
+					<Form.Label column xs={5} md={6}>
+						19
+					</Form.Label>
+					<Col xs={7} md={6}>
+						<Form.Control
+							as="input"
+							type="number"
+							inputmode="decimal"
+							pattern="[0-9]*"
+							step="0.01"
+							min="0"
+						></Form.Control>
+						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
+					</Col>
+				</Form.Group>
+				<Form.Group as={Row}>
+					<Form.Label column xs={5} md={6}>
+						19
+					</Form.Label>
+					<Col xs={7} md={6}>
+						<Form.Control
+							as="input"
+							type="number"
+							inputmode="decimal"
+							pattern="[0-9]*"
+							step="0.01"
+							min="1"
+						></Form.Control>
+						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
+					</Col>
+				</Form.Group>
 
 				{/*
 				//
