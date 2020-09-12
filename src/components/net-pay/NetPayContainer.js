@@ -24,7 +24,8 @@ class NetPayContainer extends Component {
 			commission: '',
 			overtime: '',
 			validated: false,
-			showResultsTable: false
+			showResultsTable: false,
+			inputTest: ''
 		};
 		this.resultsTable = React.createRef();
 	}

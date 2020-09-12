@@ -75,3 +75,11 @@ fieldset {
 .form-control {
 	color: $base-font-family;
 }
+
+.was-validated .test-req input:not([required]).form-control:valid {
+	// background-color: yellow;
+	border-color: $gray-400;
+	padding-right: 0.75rem;
+	background-image: none;
+	box-shadow: none;
+}

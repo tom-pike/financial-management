@@ -18,10 +18,13 @@ function NetPayForm(props) {
 		annualBonus,
 		commission,
 		overtime,
-		validated
+		validated,
+		inputTest
 	} = props.stateData;
 	const handleChange = props.handleChange;
 	const invalidNum = 'Enter a valid number.';
+
+	console.log('in', inputTest);
 
 	return (
 		<section>
@@ -71,7 +74,7 @@ function NetPayForm(props) {
 						4
 					</Form.Label>
 					<Col xs={7} md={6}>
-						<Form.Control as="input" inputmode="numeric" step="0.1"></Form.Control>
+						<Form.Control as="input" inputMode="numeric" step="0.1"></Form.Control>
 						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
 					</Col>
 				</Form.Group>
@@ -80,7 +83,7 @@ function NetPayForm(props) {
 						5
 					</Form.Label>
 					<Col xs={7} md={6}>
-						<Form.Control as="input" inputmode="numeric" pattern="[0-9]*" step="0.1"></Form.Control>
+						<Form.Control as="input" inputMode="numeric" pattern="[0-9]*" step="0.1"></Form.Control>
 						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
 					</Col>
 				</Form.Group>
@@ -89,7 +92,7 @@ function NetPayForm(props) {
 						6
 					</Form.Label>
 					<Col xs={7} md={6}>
-						<Form.Control as="input" inputmode="numeric" pattern="[0-9]*"></Form.Control>
+						<Form.Control as="input" inputMode="numeric" pattern="[0-9]*"></Form.Control>
 						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
 					</Col>
 				</Form.Group>
@@ -101,7 +104,7 @@ function NetPayForm(props) {
 						<Form.Control
 							as="input"
 							type="number"
-							inputmode="numeric"
+							inputMode="numeric"
 							pattern="[0-9]*"
 							step="0.1"
 						></Form.Control>
@@ -113,7 +116,7 @@ function NetPayForm(props) {
 						8
 					</Form.Label>
 					<Col xs={7} md={6}>
-						<Form.Control as="input" type="number" inputmode="numeric"></Form.Control>
+						<Form.Control as="input" type="number" inputMode="numeric"></Form.Control>
 						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
 					</Col>
 				</Form.Group>
@@ -122,7 +125,7 @@ function NetPayForm(props) {
 						9
 					</Form.Label>
 					<Col xs={7} md={6}>
-						<Form.Control as="input" type="number" inputmode="numeric" step="0.1"></Form.Control>
+						<Form.Control as="input" type="number" inputMode="numeric" step="0.1"></Form.Control>
 						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
 					</Col>
 				</Form.Group>
@@ -131,7 +134,7 @@ function NetPayForm(props) {
 						10
 					</Form.Label>
 					<Col xs={7} md={6}>
-						<Form.Control as="input" type="number" inputmode="decimal" step="0.1"></Form.Control>
+						<Form.Control as="input" type="number" inputMode="decimal" step="0.1"></Form.Control>
 						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
 					</Col>
 				</Form.Group>
@@ -140,7 +143,7 @@ function NetPayForm(props) {
 						11
 					</Form.Label>
 					<Col xs={7} md={6}>
-						<Form.Control as="input" type="number" inputmode="decimal" step="0.25"></Form.Control>
+						<Form.Control as="input" type="number" inputMode="decimal" step="0.25"></Form.Control>
 						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
 					</Col>
 				</Form.Group>
@@ -149,7 +152,7 @@ function NetPayForm(props) {
 						12
 					</Form.Label>
 					<Col xs={7} md={6}>
-						<Form.Control as="input" inputmode="decimal"></Form.Control>
+						<Form.Control as="input" inputMode="decimal"></Form.Control>
 						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
 					</Col>
 				</Form.Group>
@@ -158,7 +161,7 @@ function NetPayForm(props) {
 						13
 					</Form.Label>
 					<Col xs={7} md={6}>
-						<Form.Control as="input" type="number" inputmode="decimal"></Form.Control>
+						<Form.Control as="input" type="number" inputMode="decimal"></Form.Control>
 						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
 					</Col>
 				</Form.Group>
@@ -170,7 +173,7 @@ function NetPayForm(props) {
 						<Form.Control
 							as="input"
 							type="number"
-							inputmode="decimal"
+							inputMode="decimal"
 							pattern="[0-9]*"
 						></Form.Control>
 						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
@@ -184,7 +187,7 @@ function NetPayForm(props) {
 						<Form.Control
 							as="input"
 							type="number"
-							inputmode="decimal"
+							inputMode="decimal"
 							pattern="[0-9]*"
 							step="0.25"
 						></Form.Control>
@@ -198,7 +201,7 @@ function NetPayForm(props) {
 					<Col xs={7} md={6}>
 						<Form.Control
 							as="input"
-							inputmode="decimal"
+							inputMode="decimal"
 							pattern="[0-9]*"
 							step="0.25"
 						></Form.Control>
@@ -210,7 +213,7 @@ function NetPayForm(props) {
 						17
 					</Form.Label>
 					<Col xs={7} md={6}>
-						<Form.Control as="input" inputmode="decimal" pattern="[0-9]*"></Form.Control>
+						<Form.Control as="input" inputMode="decimal" pattern="[0-9]*"></Form.Control>
 						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
 					</Col>
 				</Form.Group>
@@ -219,7 +222,7 @@ function NetPayForm(props) {
 						18
 					</Form.Label>
 					<Col xs={7} md={6}>
-						<Form.Control as="input" inputmode="decimal" step="0.25"></Form.Control>
+						<Form.Control as="input" inputMode="decimal" step="0.25"></Form.Control>
 						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
 					</Col>
 				</Form.Group>
@@ -231,7 +234,7 @@ function NetPayForm(props) {
 						<Form.Control
 							as="input"
 							type="number"
-							inputmode="decimal"
+							inputMode="decimal"
 							pattern="[0-9]*"
 							step="0.01"
 							min="0"
@@ -247,10 +250,44 @@ function NetPayForm(props) {
 						<Form.Control
 							as="input"
 							type="number"
-							inputmode="decimal"
+							inputMode="decimal"
 							pattern="[0-9]*"
 							step="0.01"
 							min="1"
+						></Form.Control>
+						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
+					</Col>
+				</Form.Group>
+				<Form.Group as={Row}>
+					<Form.Label column xs={5} md={6}>
+						20
+					</Form.Label>
+					<Col xs={7} md={6}>
+						<Form.Control
+							as="input"
+							type="number"
+							inputMode="decimal"
+							pattern="[1-9]*"
+							step="0.25"
+						></Form.Control>
+						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
+					</Col>
+				</Form.Group>
+				<Form.Group as={Row}>
+					<Form.Label column xs={5} md={6}>
+						21
+					</Form.Label>
+					<Col xs={7} md={6} className={'test-req'}>
+						<Form.Control
+							as="input"
+							type="number"
+							inputMode="decimal"
+							pattern="[0-9]*"
+							step="0.01"
+							name="inputTest"
+							value={inputTest}
+							required={inputTest === 0 || inputTest > 0 ? true : false}
+							onChange={handleChange}
 						></Form.Control>
 						<Form.Control.Feedback type="invalid">Error</Form.Control.Feedback>
 					</Col>
