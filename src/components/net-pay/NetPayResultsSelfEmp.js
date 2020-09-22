@@ -3,7 +3,7 @@ import { object, shape } from 'prop-types';
 import { netPayType } from './PropTypes';
 import Table from 'react-bootstrap/table';
 import { bituachLeumiCalc } from './calculations/BituachLeumi';
-import { nationalInsuranceSelfEmp } from './calculations/nationalInsuranceSelfEmp';
+import { nationalInsuranceSelfEmp } from './calculations/NationalInsuranceSelfEmp';
 import { pensionMinCalc } from './calculations/PensionLegalMin';
 import { pensionContributionCalc } from './calculations/PensionContribution';
 import { pensionBenefitCalc } from './calculations/PensionBenefitSelfEmp';
@@ -19,7 +19,8 @@ function NetPayResultsSelfEmployed(props) {
 		baseIncome,
 		creditPoints,
 		pensionOption,
-		pensionPercent,
+		pensionType,
+		pensionAmount,
 		educationFund,
 		showResultsTable
 	} = props.stateData;
@@ -32,10 +33,11 @@ function NetPayResultsSelfEmployed(props) {
 	);
 	const pensionLegalMin = pensionMinCalc(taxData, taxYearIndex, baseIncome, employmentType);
 	const pensionContribution = pensionContributionCalc(
-		pensionOption,
 		baseIncome,
 		pensionLegalMin,
-		pensionPercent
+		pensionOption,
+		pensionAmount,
+		pensionType
 	);
 	const { pensionTaxDeductible, pensionTaxCredit } = pensionBenefitCalc(
 		taxData,
@@ -169,7 +171,8 @@ NetPayResultsSelfEmployed.propTypes = {
 		baseIncome: netPayType.baseIncome,
 		creditPoints: netPayType.creditPoints,
 		pensionOption: netPayType.pensionOption,
-		pensionPercent: netPayType.pensionPercent,
+		pensionType: netPayType.pensionType,
+		pensionAmount: netPayType.pensionAmount,
 		educationFund: netPayType.educationFund,
 		showResultsTable: netPayType.showResultsTable
 	})
