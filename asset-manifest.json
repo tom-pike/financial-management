@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/financial-management/static/css/main.cf4c9f97.chunk.css",
-    "main.js": "/financial-management/static/js/main.278c4f98.chunk.js",
-    "main.js.map": "/financial-management/static/js/main.278c4f98.chunk.js.map",
+    "main.css": "/financial-management/static/css/main.6bb20e29.chunk.css",
+    "main.js": "/financial-management/static/js/main.c87d5953.chunk.js",
+    "main.js.map": "/financial-management/static/js/main.c87d5953.chunk.js.map",
     "runtime-main.js": "/financial-management/static/js/runtime-main.29e350d8.js",
     "runtime-main.js.map": "/financial-management/static/js/runtime-main.29e350d8.js.map",
-    "static/js/2.330c02b1.chunk.js": "/financial-management/static/js/2.330c02b1.chunk.js",
-    "static/js/2.330c02b1.chunk.js.map": "/financial-management/static/js/2.330c02b1.chunk.js.map",
+    "static/js/2.66f80e42.chunk.js": "/financial-management/static/js/2.66f80e42.chunk.js",
+    "static/js/2.66f80e42.chunk.js.map": "/financial-management/static/js/2.66f80e42.chunk.js.map",
     "index.html": "/financial-management/index.html",
-    "precache-manifest.8683cfb43acba75f2669a60523a7331a.js": "/financial-management/precache-manifest.8683cfb43acba75f2669a60523a7331a.js",
+    "precache-manifest.e724914de0e94a69e94e36d957cdfb36.js": "/financial-management/precache-manifest.e724914de0e94a69e94e36d957cdfb36.js",
     "service-worker.js": "/financial-management/service-worker.js",
-    "static/css/main.cf4c9f97.chunk.css.map": "/financial-management/static/css/main.cf4c9f97.chunk.css.map",
-    "static/js/2.330c02b1.chunk.js.LICENSE": "/financial-management/static/js/2.330c02b1.chunk.js.LICENSE",
+    "static/css/main.6bb20e29.chunk.css.map": "/financial-management/static/css/main.6bb20e29.chunk.css.map",
+    "static/js/2.66f80e42.chunk.js.LICENSE": "/financial-management/static/js/2.66f80e42.chunk.js.LICENSE",
     "static/media/App.scss": "/financial-management/static/media/icon-caret-down.2ee1553f.svg",
     "static/media/Hero.scss": "/financial-management/static/media/shekel-banknotes.d339988a.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.29e350d8.js",
-    "static/js/2.330c02b1.chunk.js",
-    "static/css/main.cf4c9f97.chunk.css",
-    "static/js/main.278c4f98.chunk.js"
+    "static/js/2.66f80e42.chunk.js",
+    "static/css/main.6bb20e29.chunk.css",
+    "static/js/main.c87d5953.chunk.js"
   ]
 }
