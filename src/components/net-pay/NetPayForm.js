@@ -141,6 +141,42 @@ function NetPayForm(props) {
 									/>
 									<Form.Check.Label htmlFor="pensionlExtra">Additional</Form.Check.Label>
 								</Form.Check>
+								<Form.Check inline className={'add1'}>
+									<Form.Check.Input
+										type="radio"
+										id="pensionlExtra"
+										name="pensionOption"
+										value="additional"
+										checked={pensionOption === 'additional'}
+										disabled={baseIncome >= 1 ? false : true}
+										onChange={handleChange}
+									/>
+									<Form.Check.Label htmlFor="pensionlExtra">Additional</Form.Check.Label>
+								</Form.Check>
+								<Form.Check inline className={'add2'}>
+									<Form.Check.Input
+										type="radio"
+										id="pensionlExtra"
+										name="pensionOption"
+										value="additional"
+										checked={pensionOption === 'additional'}
+										disabled={baseIncome >= 1 ? false : true}
+										onChange={handleChange}
+									/>
+									<Form.Check.Label htmlFor="pensionlExtra">Additional</Form.Check.Label>
+								</Form.Check>
+								<Form.Check inline className={'add3'}>
+									<Form.Check.Input
+										type="radio"
+										id="pensionlExtra"
+										name="pensionOption"
+										value="additional"
+										checked={pensionOption === 'additional'}
+										disabled={baseIncome >= 1 ? false : true}
+										onChange={handleChange}
+									/>
+									<Form.Check.Label htmlFor="pensionlExtra">Additional</Form.Check.Label>
+								</Form.Check>
 								{baseIncome < 1 && (
 									<div className="small">
 										{employmentType === 'salaried'

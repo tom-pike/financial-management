@@ -1,5 +1,6 @@
 @import './partials/fonts';
 @import './partials/colors';
+@import './partials/mediaQueries';
 
 .input-group > .input-group-append:not(:last-child) > .input-group-text {
 	border-top-right-radius: 0.25rem;
@@ -30,9 +31,11 @@ input[type='number']::-webkit-outer-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
 }
+
 input[type='number'] {
 	-moz-appearance: textfield;
 }
+//end
 
 //Override autofill backgrounds
 input:-webkit-autofill,
@@ -52,6 +55,7 @@ input:-internal-autofill-selected {
 	background-image: none !important;
 	color: -internal-light-dark(black, white) !important;
 }
+//end
 
 label[as='legend'] {
 	font-weight: $strong;
@@ -80,4 +84,27 @@ fieldset {
 
 .form-check-input[disabled] ~ .form-check-label {
 	color: $disabled-font;
+}
+
+.form-check-inline {
+	margin-right: 0;
+
+	@include screen-sm {
+		margin-right: 0.75rem;
+	}
+}
+
+.add1 input[type='checkbox'],
+.add1 input[type='radio'] {
+	-webkit-transform: translate(0px); /*Earlier than iOS 9.0*/
+	transform: translate(0px);
+}
+
+.add2 input[type='radio'] {
+	margin-left: 0.5px;
+}
+
+.add3 input[type='radio'] {
+	margin-left: 0.5px;
+	margin-top: 0.5px;
 }
