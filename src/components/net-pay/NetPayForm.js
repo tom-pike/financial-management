@@ -348,6 +348,7 @@ function NetPayForm(props) {
 										pattern="[0-9]*"
 										step="0.01"
 										min="0"
+										lang="en-150"
 										value={annualBonus}
 										onChange={handleChange}
 										required={checkZeroOrGreater(annualBonus)}
