@@ -300,7 +300,7 @@ function NetPayForm(props) {
 										name="travelAllowance"
 										type="number"
 										inputMode="numeric"
-										pattern="[0-9]*"
+										pattern="\d*"
 										step="0.01"
 										min="0"
 										value={travelAllowance}
@@ -321,7 +321,7 @@ function NetPayForm(props) {
 										name="lunchAllowance"
 										type="text"
 										inputMode="numeric"
-										pattern="[0-9]*"
+										pattern="\d*"
 										step="0.01"
 										min="0"
 										value={lunchAllowance}

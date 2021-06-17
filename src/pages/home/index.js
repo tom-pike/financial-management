@@ -7,7 +7,7 @@ function Home() {
 		<>
 			<Hero />
 			<ul>
-				<p>v2</p>
+				<p>v3</p>
 				<Link to="/calculators/salaried/net-pay">
 					<li>Salaried</li>
 				</Link>
