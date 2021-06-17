@@ -319,9 +319,9 @@ function NetPayForm(props) {
 										as="input"
 										id="lunchAllowance"
 										name="lunchAllowance"
-										type="text"
-										inputMode="numeric"
-										pattern="\d*"
+										type="number"
+										inputMode="decimal"
+										lang="en-GB"
 										step="0.01"
 										min="0"
 										value={lunchAllowance}
@@ -366,8 +366,6 @@ function NetPayForm(props) {
 										id="commission"
 										name="commission"
 										type="number"
-										inputMode="decimal"
-										pattern="[0-9]*"
 										step="0.01"
 										min="0"
 										value={commission}
