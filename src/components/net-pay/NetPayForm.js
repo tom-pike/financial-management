@@ -74,6 +74,7 @@ function NetPayForm(props) {
 						<Form.Control
 							as="input"
 							id="income"
+							lang="en-GB"
 							name="baseIncome"
 							type="number"
 							inputMode="decimal"
@@ -97,6 +98,7 @@ function NetPayForm(props) {
 							id="creditPoints"
 							name="creditPoints"
 							type="number"
+							lang="en"
 							inputMode="decimal"
 							pattern="[0-9]*"
 							step="0.25"

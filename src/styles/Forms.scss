@@ -94,8 +94,8 @@ fieldset {
 	}
 }
 
-.add1 input[type='checkbox'],
-.add1 input[type='radio'] {
+input[type='checkbox'],
+input[type='radio'] {
 	-webkit-transform: translate(0px); /*Earlier than iOS 9.0*/
 	transform: translate(0px);
 }
