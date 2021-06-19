@@ -32,8 +32,12 @@ class NetPayContainer extends Component {
 
 	handleChange = event => {
 		const { name, value, type } = event.target;
+		// this.setState({
+		// 	[name]: type === 'number' ? parseFloat(value) || '' : value,
+		// 	showResultsTable: false
+		// });
 		this.setState({
-			[name]: type === 'number' ? parseFloat(value) || '' : value,
+			[name]: value,
 			showResultsTable: false
 		});
 

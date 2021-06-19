@@ -31,6 +31,8 @@ function NetPayForm(props) {
 	const mdField = 12 - mdLabel;
 	const pensionMin = pensionMinCalc(taxData, taxYearIndex, baseIncome, employmentType).toFixed(2);
 	const pensionMinPecrcent = ((pensionMin / baseIncome) * 100).toFixed(2);
+	console.log('creditPoints', creditPoints);
+	alert('value = ' + creditPoints);
 
 	return (
 		<section>
