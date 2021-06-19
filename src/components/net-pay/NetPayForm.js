@@ -33,6 +33,7 @@ function NetPayForm(props) {
 	const pensionMinPecrcent = ((pensionMin / baseIncome) * 100).toFixed(2);
 	// alert('languages = ' + window.navigator.languages);
 	console.log('overtime', overtime);
+	// alert('overtime = ' + overtime);
 
 	return (
 		<section>

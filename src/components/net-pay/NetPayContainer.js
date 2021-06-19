@@ -5,6 +5,7 @@ import './NetPay.scss';
 import NetPayForm from './NetPayForm';
 import NetPayResultsSalaried from './NetPayResultsSalaried';
 import NetPayResultsSelfEmployed from './NetPayResultsSelfEmp';
+import { formatDecimal } from '../../utils/FormatDecimal';
 
 class NetPayContainer extends Component {
 	constructor(props) {
@@ -32,14 +33,20 @@ class NetPayContainer extends Component {
 
 	handleChange = event => {
 		const { name, value, type } = event.target;
+
+		const valueDecimal = type === 'number' && formatDecimal(value);
+
+		console.log('valueDecimal', valueDecimal);
+
+		this.setState({
+			[name]: type === 'number' ? parseFloat(valueDecimal) || '' : valueDecimal,
+			showResultsTable: false
+		});
+
 		// this.setState({
 		// 	[name]: type === 'number' ? parseFloat(value) || '' : value,
 		// 	showResultsTable: false
 		// });
-		this.setState({
-			[name]: value,
-			showResultsTable: false
-		});
 
 		if (name === 'pensionOption' && value === 'legalMin') {
 			this.setState({
