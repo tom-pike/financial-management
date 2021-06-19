@@ -31,55 +31,7 @@ function NetPayForm(props) {
 	const mdField = 12 - mdLabel;
 	const pensionMin = pensionMinCalc(taxData, taxYearIndex, baseIncome, employmentType).toFixed(2);
 	const pensionMinPecrcent = ((pensionMin / baseIncome) * 100).toFixed(2);
-	console.log('navigator.language', window.navigator.language);
-	// console.log('window.navigator.userLanguage', window.navigator.userLanguage);
-	// console.log('window.navigator.userAgent', window.navigator.userAgent);
-	console.log('en', window.navigator.userAgent);
-	alert('navigator.language = ' + window.navigator.language);
-	alert('navigator.languages = ' + window.navigator.languages);
-	// alert('userAgent = ' + window.navigator.userAgent);
-	// if (window.navigator.language == 'en-GB') {
-	// 	console.log('== en-GB', true);
-	// }
-	// if (window.navigator.language === 'en-GB') {
-	// 	console.log('=== en-GB', true);
-	// }
-	// if (window.navigator.language == 'en') {
-	// 	console.log('== en', true);
-	// }
-	// if (window.navigator.language === 'en') {
-	// 	console.log('=== en', true);
-	// }
-	// if (window.navigator.language == 'en-ZA') {
-	// 	console.log('== en-GB', true);
-	// }
-	// if (window.navigator.language === 'en-ZA') {
-	// 	console.log('=== en-ZA', true);
-	// }
-	if (window.navigator.language == 'en-GB') {
-		alert('== en-GB ' + true);
-	}
-	if (window.navigator.language === 'en-GB') {
-		alert('=== en-GB ' + true);
-	}
-	if (window.navigator.language == 'en-gb') {
-		alert('== en-gb ' + true);
-	}
-	if (window.navigator.language === 'en-gb') {
-		alert('=== en-gb ' + true);
-	}
-	if (window.navigator.language == 'en') {
-		alert('== en ' + true);
-	}
-	if (window.navigator.language === 'en') {
-		alert('=== en ' + true);
-	}
-	if (window.navigator.language == 'en-ZA') {
-		alert('== en-GB ' + true);
-	}
-	if (window.navigator.language === 'en-ZA') {
-		alert('=== en-ZA', true);
-	}
+	alert('languages = ' + window.navigator.languages);
 
 	return (
 		<section>
@@ -347,8 +299,9 @@ function NetPayForm(props) {
 										as="input"
 										id="travelAllowance"
 										name="travelAllowance"
-										type="text"
-										inputMode="numeric"
+										type="number"
+										inputMode="decimal"
+										pattern="[0-9]*"
 										step="0.01"
 										min="0"
 										value={travelAllowance}
@@ -368,7 +321,8 @@ function NetPayForm(props) {
 										id="lunchAllowance"
 										name="lunchAllowance"
 										type="number"
-										inputMode="numeric"
+										inputMode="decimal"
+										pattern="[0-9]*"
 										step="0.01"
 										min="0"
 										value={lunchAllowance}
@@ -390,8 +344,8 @@ function NetPayForm(props) {
 										as="input"
 										id="annualBonus"
 										name="annualBonus"
-										type="text"
-										inputMode="numeric"
+										type="number"
+										inputMode="decimal"
 										pattern="[0-9]*"
 										step="0.01"
 										min="0"
@@ -412,6 +366,8 @@ function NetPayForm(props) {
 										id="commission"
 										name="commission"
 										type="number"
+										inputMode="decimal"
+										pattern="[0-9]*"
 										step="0.01"
 										min="0"
 										value={commission}
@@ -431,7 +387,7 @@ function NetPayForm(props) {
 										id="overtime"
 										name="overtime"
 										type="number"
-										inputMode="decimal"
+										inputMode="numeric"
 										pattern="[0-9]*"
 										step="0.01"
 										min="0"
