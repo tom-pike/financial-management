@@ -5,7 +5,6 @@ import './NetPay.scss';
 import NetPayForm from './NetPayForm';
 import NetPayResultsSalaried from './NetPayResultsSalaried';
 import NetPayResultsSelfEmployed from './NetPayResultsSelfEmp';
-import { formatDecimal } from '../../utils/FormatDecimal';
 
 class NetPayContainer extends Component {
 	constructor(props) {
@@ -25,6 +24,7 @@ class NetPayContainer extends Component {
 			annualBonus: '',
 			commission: '',
 			overtime: '',
+			keypad: 'gb',
 			validated: false,
 			showResultsTable: false
 		};
@@ -33,20 +33,10 @@ class NetPayContainer extends Component {
 
 	handleChange = event => {
 		const { name, value, type } = event.target;
-
-		const valueDecimal = type === 'number' && formatDecimal(value);
-
-		console.log('valueDecimal', valueDecimal);
-
 		this.setState({
-			[name]: type === 'number' ? parseFloat(valueDecimal) || '' : valueDecimal,
+			[name]: type === 'number' ? parseFloat(value) || '' : value,
 			showResultsTable: false
 		});
-
-		// this.setState({
-		// 	[name]: type === 'number' ? parseFloat(value) || '' : value,
-		// 	showResultsTable: false
-		// });
 
 		if (name === 'pensionOption' && value === 'legalMin') {
 			this.setState({
@@ -58,6 +48,12 @@ class NetPayContainer extends Component {
 				pensionOption: 'legalMin'
 			});
 		}
+	};
+
+	handleClick = () => {
+		this.setState({
+			keypad: 'za'
+		});
 	};
 
 	scrollToMyRef = () => {
@@ -96,6 +92,7 @@ class NetPayContainer extends Component {
 					stateData={this.state}
 					handleChange={this.handleChange}
 					handleSubmit={this.handleSubmit}
+					handleClick={this.handleClick}
 				/>
 				{this.state.employmentType === 'salaried' && (
 					<NetPayResultsSalaried stateData={this.state} refProp={this.resultsTable} />

@@ -21,9 +21,11 @@ function NetPayForm(props) {
 		annualBonus,
 		commission,
 		overtime,
+		keypad,
 		validated
 	} = props.stateData;
 	const handleChange = props.handleChange;
+	const handleClick = props.handleClick;
 	const invalidNum = 'Enter a valid number (2 decimal places).';
 	const xsLabel = 7;
 	const mdLabel = 6;
@@ -31,12 +33,14 @@ function NetPayForm(props) {
 	const mdField = 12 - mdLabel;
 	const pensionMin = pensionMinCalc(taxData, taxYearIndex, baseIncome, employmentType).toFixed(2);
 	const pensionMinPecrcent = ((pensionMin / baseIncome) * 100).toFixed(2);
-	// alert('languages = ' + window.navigator.languages);
-	console.log('overtime', overtime);
-	alert('overtime = ' + overtime);
+	console.log('keypad', keypad);
 
 	return (
 		<section>
+			<Button variant="danger" onClick={handleClick}>
+				My iPhone region's set to South Africa and we use decimal commas instead of points!
+			</Button>
+
 			<h2>Net pay calculator</h2>
 			<Form
 				id={`netpay-form-${employmentType}`}
@@ -80,7 +84,7 @@ function NetPayForm(props) {
 							lang="en-GB"
 							name="baseIncome"
 							type="number"
-							inputMode="decimal"
+							inputMode={keypad === 'gb' ? 'decimal' : 'text'}
 							pattern="[0-9]*"
 							step="0.01"
 							min="0"
@@ -102,7 +106,7 @@ function NetPayForm(props) {
 							name="creditPoints"
 							type="number"
 							lang="en"
-							inputMode="decimal"
+							inputMode={keypad === 'gb' ? 'decimal' : 'text'}
 							pattern="[0-9]*"
 							step="0.25"
 							min="0"
@@ -235,7 +239,7 @@ function NetPayForm(props) {
 												id="pensionAmount"
 												name="pensionAmount"
 												type="number"
-												inputMode="decimal"
+												inputMode={keypad === 'gb' ? 'decimal' : 'text'}
 												pattern="[0-9]*"
 												step="0.01"
 												min={pensionType === 'percent' ? pensionMinPecrcent : pensionMin}
@@ -269,7 +273,7 @@ function NetPayForm(props) {
 									id="educationFund"
 									name="educationFund"
 									type="number"
-									inputMode="decimal"
+									inputMode={keypad === 'gb' ? 'decimal' : 'text'}
 									pattern="[0-9]*"
 									step="0.01"
 									min="1"
@@ -302,7 +306,7 @@ function NetPayForm(props) {
 										id="travelAllowance"
 										name="travelAllowance"
 										type="number"
-										inputMode="decimal"
+										inputMode={keypad === 'gb' ? 'decimal' : 'text'}
 										pattern="[0-9]*"
 										step="0.01"
 										min="0"
@@ -323,7 +327,7 @@ function NetPayForm(props) {
 										id="lunchAllowance"
 										name="lunchAllowance"
 										type="number"
-										inputMode="text"
+										inputMode={keypad === 'gb' ? 'decimal' : 'text'}
 										pattern="[0-9]*"
 										step="0.01"
 										min="0"
@@ -347,7 +351,7 @@ function NetPayForm(props) {
 										id="annualBonus"
 										name="annualBonus"
 										type="number"
-										inputMode="text"
+										inputMode={keypad === 'gb' ? 'decimal' : 'text'}
 										pattern="[0-9][,]*"
 										step="0.01"
 										min="0"
@@ -369,6 +373,7 @@ function NetPayForm(props) {
 										name="commission"
 										type="number"
 										pattern="[0-9][,]*"
+										inputMode={keypad === 'gb' ? 'decimal' : 'text'}
 										step="0.01"
 										min="0"
 										value={commission}
@@ -388,8 +393,9 @@ function NetPayForm(props) {
 										id="overtime"
 										name="overtime"
 										type="number"
-										inputMode="decimal"
-										pattern="[0-9][,]*"
+										inputMode={keypad === 'gb' ? 'decimal' : 'text'}
+										// pattern="[,]*"
+										lang="en-a"
 										step="0.01"
 										min="0"
 										value={overtime}
