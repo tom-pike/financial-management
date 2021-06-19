@@ -32,11 +32,11 @@ function NetPayForm(props) {
 	const pensionMin = pensionMinCalc(taxData, taxYearIndex, baseIncome, employmentType).toFixed(2);
 	const pensionMinPecrcent = ((pensionMin / baseIncome) * 100).toFixed(2);
 	console.log('navigator.language', window.navigator.language);
-	console.log('window.navigator.userLanguage', window.navigator.userLanguage);
-	console.log('window.navigator.userAgent', window.navigator.userAgent);
+	// console.log('window.navigator.userLanguage', window.navigator.userLanguage);
+	// console.log('window.navigator.userAgent', window.navigator.userAgent);
 	console.log('en', window.navigator.userAgent);
 	alert('navigator.language = ' + window.navigator.language);
-	// alert('window.navigator.userLanguage = ' + window.navigator.userLanguage);
+	alert('navigator.languages = ' + window.navigator.languages);
 	// alert('userAgent = ' + window.navigator.userAgent);
 	// if (window.navigator.language == 'en-GB') {
 	// 	console.log('== en-GB', true);
@@ -61,6 +61,12 @@ function NetPayForm(props) {
 	}
 	if (window.navigator.language === 'en-GB') {
 		alert('=== en-GB ' + true);
+	}
+	if (window.navigator.language == 'en-gb') {
+		alert('== en-gb ' + true);
+	}
+	if (window.navigator.language === 'en-gb') {
+		alert('=== en-gb ' + true);
 	}
 	if (window.navigator.language == 'en') {
 		alert('== en ' + true);
