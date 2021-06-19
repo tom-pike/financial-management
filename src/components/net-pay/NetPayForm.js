@@ -31,8 +31,10 @@ function NetPayForm(props) {
 	const mdField = 12 - mdLabel;
 	const pensionMin = pensionMinCalc(taxData, taxYearIndex, baseIncome, employmentType).toFixed(2);
 	const pensionMinPecrcent = ((pensionMin / baseIncome) * 100).toFixed(2);
-	console.log('creditPoints', creditPoints);
-	alert('value = ' + creditPoints);
+	console.log('navigator.language', window.navigator.language);
+	console.log('window.navigator.userLanguage', window.navigator.userLanguage);
+	alert('navigator.language = ' + window.navigator.language);
+	alert('window.navigator.userLanguage = ' + window.navigator.userLanguage);
 
 	return (
 		<section>
@@ -300,7 +302,7 @@ function NetPayForm(props) {
 										as="input"
 										id="travelAllowance"
 										name="travelAllowance"
-										type="number"
+										type="text"
 										inputMode="numeric"
 										pattern="\d*"
 										step="0.01"
@@ -322,8 +324,8 @@ function NetPayForm(props) {
 										id="lunchAllowance"
 										name="lunchAllowance"
 										type="number"
-										inputMode="decimal"
-										lang="en-GB"
+										inputMode="numeric"
+										lpattern="[0-9]*"
 										step="0.01"
 										min="0"
 										value={lunchAllowance}
@@ -345,12 +347,11 @@ function NetPayForm(props) {
 										as="input"
 										id="annualBonus"
 										name="annualBonus"
-										type="number"
-										inputMode="decimal"
+										type="text"
+										inputMode="numeric"
 										pattern="[0-9]*"
 										step="0.01"
 										min="0"
-										lang="en-150"
 										value={annualBonus}
 										onChange={handleChange}
 										required={checkZeroOrGreater(annualBonus)}
