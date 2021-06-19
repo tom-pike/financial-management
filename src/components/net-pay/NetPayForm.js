@@ -35,7 +35,7 @@ function NetPayForm(props) {
 	console.log('window.navigator.userLanguage', window.navigator.userLanguage);
 	console.log('window.navigator.userAgent', window.navigator.userAgent);
 	console.log('en', window.navigator.userAgent);
-	// alert('navigator.language = ' + window.navigator.language);
+	alert('navigator.language = ' + window.navigator.language);
 	// alert('window.navigator.userLanguage = ' + window.navigator.userLanguage);
 	// alert('userAgent = ' + window.navigator.userAgent);
 	// if (window.navigator.language == 'en-GB') {
@@ -57,19 +57,19 @@ function NetPayForm(props) {
 	// 	console.log('=== en-ZA', true);
 	// }
 	if (window.navigator.language == 'en-GB') {
-		alert('== en-GB', true);
+		alert('== en-GB ' + true);
 	}
 	if (window.navigator.language === 'en-GB') {
-		alert('=== en-GB', true);
+		alert('=== en-GB ' + true);
 	}
 	if (window.navigator.language == 'en') {
-		alert('== en', true);
+		alert('== en ' + true);
 	}
 	if (window.navigator.language === 'en') {
-		alert('=== en', true);
+		alert('=== en ' + true);
 	}
 	if (window.navigator.language == 'en-ZA') {
-		alert('== en-GB', true);
+		alert('== en-GB ' + true);
 	}
 	if (window.navigator.language === 'en-ZA') {
 		alert('=== en-ZA', true);
