@@ -33,8 +33,29 @@ function NetPayForm(props) {
 	const pensionMinPecrcent = ((pensionMin / baseIncome) * 100).toFixed(2);
 	console.log('navigator.language', window.navigator.language);
 	console.log('window.navigator.userLanguage', window.navigator.userLanguage);
-	alert('navigator.language = ' + window.navigator.language);
-	alert('window.navigator.userLanguage = ' + window.navigator.userLanguage);
+	console.log('window.navigator.userAgent', window.navigator.userAgent);
+	console.log('en', window.navigator.userAgent);
+	// alert('navigator.language = ' + window.navigator.language);
+	// alert('window.navigator.userLanguage = ' + window.navigator.userLanguage);
+	// alert('userAgent = ' + window.navigator.userAgent);
+	if (window.navigator.language == 'en-GB') {
+		console.log('== en-GB', true);
+	}
+	if (window.navigator.language === 'en-GB') {
+		console.log('=== en-GB', true);
+	}
+	if (window.navigator.language == 'en') {
+		console.log('== en', true);
+	}
+	if (window.navigator.language === 'en') {
+		console.log('=== en', true);
+	}
+	if (window.navigator.language == 'en-ZA') {
+		console.log('== en-GB', true);
+	}
+	if (window.navigator.language === 'en-ZA') {
+		console.log('=== en-ZA', true);
+	}
 
 	return (
 		<section>
@@ -304,7 +325,6 @@ function NetPayForm(props) {
 										name="travelAllowance"
 										type="text"
 										inputMode="numeric"
-										pattern="\d*"
 										step="0.01"
 										min="0"
 										value={travelAllowance}
@@ -325,7 +345,6 @@ function NetPayForm(props) {
 										name="lunchAllowance"
 										type="number"
 										inputMode="numeric"
-										lpattern="[0-9]*"
 										step="0.01"
 										min="0"
 										value={lunchAllowance}
