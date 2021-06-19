@@ -38,23 +38,41 @@ function NetPayForm(props) {
 	// alert('navigator.language = ' + window.navigator.language);
 	// alert('window.navigator.userLanguage = ' + window.navigator.userLanguage);
 	// alert('userAgent = ' + window.navigator.userAgent);
+	// if (window.navigator.language == 'en-GB') {
+	// 	console.log('== en-GB', true);
+	// }
+	// if (window.navigator.language === 'en-GB') {
+	// 	console.log('=== en-GB', true);
+	// }
+	// if (window.navigator.language == 'en') {
+	// 	console.log('== en', true);
+	// }
+	// if (window.navigator.language === 'en') {
+	// 	console.log('=== en', true);
+	// }
+	// if (window.navigator.language == 'en-ZA') {
+	// 	console.log('== en-GB', true);
+	// }
+	// if (window.navigator.language === 'en-ZA') {
+	// 	console.log('=== en-ZA', true);
+	// }
 	if (window.navigator.language == 'en-GB') {
-		console.log('== en-GB', true);
+		alert('== en-GB', true);
 	}
 	if (window.navigator.language === 'en-GB') {
-		console.log('=== en-GB', true);
+		alert('=== en-GB', true);
 	}
 	if (window.navigator.language == 'en') {
-		console.log('== en', true);
+		alert('== en', true);
 	}
 	if (window.navigator.language === 'en') {
-		console.log('=== en', true);
+		alert('=== en', true);
 	}
 	if (window.navigator.language == 'en-ZA') {
-		console.log('== en-GB', true);
+		alert('== en-GB', true);
 	}
 	if (window.navigator.language === 'en-ZA') {
-		console.log('=== en-ZA', true);
+		alert('=== en-ZA', true);
 	}
 
 	return (
