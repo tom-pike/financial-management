@@ -31,7 +31,7 @@ function NetPayForm(props) {
 	const mdField = 12 - mdLabel;
 	const pensionMin = pensionMinCalc(taxData, taxYearIndex, baseIncome, employmentType).toFixed(2);
 	const pensionMinPecrcent = ((pensionMin / baseIncome) * 100).toFixed(2);
-	alert('languages = ' + window.navigator.languages);
+	// alert('languages = ' + window.navigator.languages);
 
 	return (
 		<section>
@@ -345,7 +345,7 @@ function NetPayForm(props) {
 										id="annualBonus"
 										name="annualBonus"
 										type="number"
-										inputMode="decimal"
+										inputMode="text"
 										pattern="[0-9]*"
 										step="0.01"
 										min="0"
@@ -366,7 +366,7 @@ function NetPayForm(props) {
 										id="commission"
 										name="commission"
 										type="number"
-										inputMode="decimal"
+										// inputMode="decimal"
 										pattern="[0-9]*"
 										step="0.01"
 										min="0"
@@ -387,7 +387,7 @@ function NetPayForm(props) {
 										id="overtime"
 										name="overtime"
 										type="number"
-										inputMode="numeric"
+										inputMode=""
 										pattern="[0-9]*"
 										step="0.01"
 										min="0"
