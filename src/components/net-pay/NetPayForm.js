@@ -393,9 +393,8 @@ function NetPayForm(props) {
 										id="overtime"
 										name="overtime"
 										type="number"
-										inputMode={keypad === 'gb' ? 'decimal' : 'text'}
-										// pattern="[,]*"
-										lang="en-a"
+										// inputMode={keypad === 'gb' ? 'decimal' : 'text'}
+										pattern="[0-9]"
 										step="0.01"
 										min="0"
 										value={overtime}
