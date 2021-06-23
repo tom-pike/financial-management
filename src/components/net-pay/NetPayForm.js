@@ -38,7 +38,7 @@ function NetPayForm(props) {
 	return (
 		<section>
 			<Button variant="danger" onClick={handleClick}>
-				My iPhone region's set to South Africa and we use decimal commas instead of points!
+				Press if you're Mark and/or use decimal commas instead of points!
 			</Button>
 
 			<h2>Net pay calculator</h2>
@@ -393,8 +393,8 @@ function NetPayForm(props) {
 										id="overtime"
 										name="overtime"
 										type="number"
-										// inputMode={keypad === 'gb' ? 'decimal' : 'text'}
-										pattern="[0-9]"
+										inputMode={keypad === 'za' ? '' : 'decimal'}
+										pattern="[0-9]*"
 										step="0.01"
 										min="0"
 										value={overtime}
