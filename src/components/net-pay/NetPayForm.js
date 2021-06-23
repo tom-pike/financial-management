@@ -273,8 +273,8 @@ function NetPayForm(props) {
 									id="educationFund"
 									name="educationFund"
 									type="number"
-									inputMode={keypad === 'gb' ? 'decimal' : 'text'}
-									pattern="[0-9]*"
+									inputMode={keypad === 'za' ? 'none' : 'decimal'}
+									pattern="[0-9]"
 									step="0.01"
 									min="1"
 									max="100"
@@ -306,7 +306,7 @@ function NetPayForm(props) {
 										id="travelAllowance"
 										name="travelAllowance"
 										type="number"
-										inputMode={keypad === 'gb' ? 'decimal' : 'text'}
+										inputMode={keypad === 'za' ? 'none' : 'decimal'}
 										pattern="[0-9]*"
 										step="0.01"
 										min="0"
@@ -327,8 +327,8 @@ function NetPayForm(props) {
 										id="lunchAllowance"
 										name="lunchAllowance"
 										type="number"
-										inputMode={keypad === 'gb' ? 'decimal' : 'text'}
-										pattern="[0-9]*"
+										// inputMode={keypad === 'gb' ? 'decimal' : 'text'}
+										pattern="[0-9]"
 										step="0.01"
 										min="0"
 										value={lunchAllowance}
@@ -351,8 +351,8 @@ function NetPayForm(props) {
 										id="annualBonus"
 										name="annualBonus"
 										type="number"
-										inputMode={keypad === 'gb' ? 'decimal' : 'text'}
-										pattern="[0-9][,]*"
+										// inputMode={keypad === 'gb' ? 'decimal' : 'text'}
+										pattern="[0-9]*"
 										step="0.01"
 										min="0"
 										value={annualBonus}
@@ -372,8 +372,8 @@ function NetPayForm(props) {
 										id="commission"
 										name="commission"
 										type="number"
-										pattern="[0-9][,]*"
-										inputMode={keypad === 'gb' ? 'decimal' : 'text'}
+										pattern="[0-9]"
+										inputMode={keypad === 'za' ? '' : 'decimal'}
 										step="0.01"
 										min="0"
 										value={commission}
